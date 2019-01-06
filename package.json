@@ -1,0 +1,34 @@
+{
+  "name": "sbrw-server",
+  "version": "1.0.0",
+  "description": "This is a soap-box race world server setup ported in NodeJS.",
+  "main": "system/server.js",
+  "scripts": {
+    "start": "node system/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityachakravarty/sbrw-server.git"
+  },
+  "keywords": [
+    "NFSW",
+    "Soapbox",
+    "Race",
+    "World",
+    "Javascript",
+    "Multiplayer"
+  ],
+  "author": "Aaditya Chakravarty",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/aadityachakravarty/sbrw-server/issues"
+  },
+  "homepage": "https://github.com/aadityachakravarty/sbrw-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.2",
+    "morgan": "^1.9.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "server": {
+        "port": 8680
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/sbrw"
+    }
+}
