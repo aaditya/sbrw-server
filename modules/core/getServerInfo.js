@@ -23,7 +23,7 @@ const serverInfo = (req, res) => {
         "onlineNumber": 0,
         "requireTicket": false,
         "serverVersion": "1.0.0",
-        "maxOnlinePlayers": 10
+        "maxOnlinePlayers": 100
     });
 }
 
