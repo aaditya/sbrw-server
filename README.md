@@ -2,9 +2,7 @@
 
 ## Description
 
-> This is the soap-box race world server re-written in NodeJS and reverse engineered through the official SBRW server and has focus on security and other stuff.
-
-> Also, lack of good documentation in official repo caused to make this.
+> This is the soap-box race world server developed in NodeJS.
 
 ## Requirements
 
@@ -16,32 +14,20 @@
 
 ## Installation and Running
 
-### npm
-
 > npm i (to install the dependencies)
 
 > npm start
 
-## yarn
-
-> yarn install
-
-> yarn run start
-
 ## What's working
 
-> Currently, the game is just starting up, everything is based on static data so need to change that.
-
-> Game boots.
+> Nothing works.
 
 ## To Do
 
-> Add persona support and parsing.
+> Create basic file structure.
 
-> Create dynamic APIs.
+> Setup all the APIs.
 
-> Figure out other APIs.
+> Setup all the XML outputs.
 
-> Secure the APIs.
-
-> Develop the UDP server ?
+> Track UDP packets.

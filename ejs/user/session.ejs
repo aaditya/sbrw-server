@@ -1,8 +1,4 @@
-const permSess = (req, res) => {
-    console.log('body', req.body);
-    console.log('head', req.headers)
-    res.send(`
-    <UserInfo>
+<UserInfo>
     <defaultPersonaIdx>0</defaultPersonaIdx>
     <personas>
         <ProfileData>
@@ -28,7 +24,3 @@ const permSess = (req, res) => {
         <userId>26083</userId>
     </user>
 </UserInfo>
-    `)
-}
-
-module.exports = permSess;
