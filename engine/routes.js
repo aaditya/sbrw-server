@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 // Miscellaneous functions.
-const auth = require('./user/tokenVerify');
-const logger = require('./misc/logger');
+const auth = require('./User/tokenVerify');
+const logger = require('../system/misc/logger');
 
 // Achievements
 router.use('/achievements', require('./Achievements/index'));

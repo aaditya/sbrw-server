@@ -1,4 +1,7 @@
 {
+    "settings": {
+        "secret": "checkbox123"
+    },
     "server": {
         "port": 8680
     },

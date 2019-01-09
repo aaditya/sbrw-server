@@ -5,6 +5,8 @@ const path = require('path');
 
 const app = express();
 
+const config = require('./system/config.json');
+
 // XML/HTML Rendering Engine
 app.set('views', path.join(__dirname, 'ejs'));
 app.set('view engine', 'ejs');
@@ -13,11 +15,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.set('superSecret', 'check123');
+app.set('superSecret', config.settings.secret);
 
 // API backtracking
 app.use(morgan('dev'));
 
-app.use('/soapbox-race-core/Engine.svc', require('./engine/index'));
+app.use('/soapbox-race-core/Engine.svc', require('./engine/routes'));
 
 module.exports = app;

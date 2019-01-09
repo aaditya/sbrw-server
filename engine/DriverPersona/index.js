@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/GetExpLevelPointsMap', auth, require('./explpm'));
+router.get('/GetExpLevelPointsMap', require('./explpm'));
 // router.get('/GetPersonalInfo', auth, ...);
 // router.post('/ReserveName', auth, ...);
 // router.post('/UnreserveName', auth, ...);

@@ -22,6 +22,8 @@
 
 > All the APIs have been listed as of now.
 
+> Server is starting up.
+
 ## To Do
 
 > Need to figure out the database schema and transactions.
