@@ -6,28 +6,36 @@
 
 ## Requirements
 
-> NodeJS (v8 or above)
+> NodeJS (v10 or above)
 
-> NPM (v5 or above)
+> NPM (v6 or above)
 
 > MongoDB server (you can use third party remote servers too.)
 
 ## Installation and Running
 
-> npm i (to install the dependencies)
+> npm i
 
 > npm start
 
-## What's working
+## What's done
 
-> Nothing works.
+> All the APIs have been listed as of now.
 
 ## To Do
 
-> Create basic file structure.
+> Need to figure out the database schema and transactions.
 
-> Setup all the APIs.
+> XSD to EJS migrate.
+
+> UDP packet capturing.
+
+> Create basic file structure.
 
 > Setup all the XML outputs.
 
+> Figure out outputs.
+
 > Track UDP packets.
+
+> Offline Testing

@@ -5,66 +5,100 @@ const router = express.Router();
 const auth = require('./user/tokenVerify');
 const logger = require('./misc/logger');
 
-// Server Info
-router.get('/GetServerInformation', require('./core/getServerInfo'));
+// Achievements
+router.use('/achievements', require('./Achievements/index'));
 
-// Authentication Routes
-router.get('/User/createUser', require('./user/createUser'));
-router.get('/User/authenticateUser', require('./user/authUser'));
-router.get('/User/SecureLogout' , logger, require('./user/logoutUser'));
-
-// Session Route
-router.post('/User/GetPermanentSession', auth, require('./user/permSess'));
-
-// FriendList
-router.get('/getfriendlistfromuserid', require('./core/frndList'));
-
-// User Settings
-router.get('/getusersettings', require('./core/userSettings'));
-
-// Client
-router.get('/logging/client', require('./client/logging'));
-
-// System Info
-router.get('/systeminfo', require('./core/systeminfo'));
-
-// Chat Info
-router.get('/Session/GetChatInfo', require('./session/chat'));
+// Add Friend
+router.get('/addfriendrequest', require('./Core/addFriend'));
 
 // Car Classes
-router.get('/carclasses', require('./core/carClasses'));
-
-// Driver Persona
-router.get('/DriverPersona/GetExpLevelPointsMap', auth, require('./persona/explpm'));
-// router.get('/DriverPersona/GetPersonalInfo', auth, ...);
-// router.post('/DriverPersona/ReserveName', auth, ...);
-// router.post('/DriverPersona/UnreserveName', auth, ...);
-// router.post('/DriverPersona/CreatePersona', auth, ...);
-// router.post('/DriverPersona/DeletePersona', auth, ...);
-// router.post('/DriverPersona/GetPersonaBaseFromList', auth, ...);
-// router.post('/DriverPersona/UpdatePersonaPresence', auth, ...);
-// router.post('/DriverPersona/GetPersonaPresenceByName', auth, ...);
-// router.post('/DriverPersona/UpdateStatusMessage', auth, ...);
-
-
-// Personas
-router.get('/personas/:id/carslots', require('./persona/carSlots'));
-router.get('/personas/:id/defaultcar', require('./persona/defaultCar'));
-
-// Security APIs
-router.get('/security/fraudConfig', require('./security/fraudCfg'));
-
-// Other APIs
-router.get('/getrebroadcasters', require('./core/reBroadcasters'));
-router.get('/getregioninfo', require('./core/regionInfo'));
-router.get('/LoginAnnouncements', require('./core/loginAnnouncements'));
+router.get('/carclasses', require('./Core/carClasses'));
 
 // Catalog
-router.get('/catalog/productsInCategory', require('./catalog/productsInCategory'));
+router.use('/catalog', require('./Catalog/index'));
 
-router.post('/Reporting/SendHardwareInfo', require('./reporting/hardware'));
-router.post('/Reporting/SendUserSettings', require('./reporting/hardware'));
+// Driver Persona
+router.use('/DriverPersona', require('./DriverPersona/index'));
 
+// Event
+router.use('/event', require('./Event/index'));
 
+// Events
+router.use('/events', require('./Events/index'));
+
+// Server Info
+router.get('/GetServerInformation', require('./Core/getServerInfo'));
+
+// Get Blocked User List
+router.get('/getblockeduserlist', require('./Core/getBlockedUserList'));
+
+// Get Blockers
+router.get('/getblockersbyusers', require('./Core/getBlockers'));
+
+// Get Social Settings
+router.get('/getsocialsettings', require('./Core/getSocialSettings'));
+
+// Get Social Network Info
+router.get('/getsocialnetworkinfo', require('./Core/getSocialNetwork'));
+
+// Get User Settings
+router.get('/getusersettings', require('./Core/userSettings'));
+
+// FriendList
+router.get('/getfriendlistfromuserid', require('./Core/friendList'));
+
+// Gifts
+router.use('/Gifts', require('./Gifts/index'));
+
+// Heartbeat
+router.post('/heartbeat', require('./Core/heartbeat'));
+
+// Login Announcements
+router.get('/LoginAnnouncements', require('./Core/loginAnnouncements'));
+
+// Logging
+router.use('/logging', require('./Logging/index'))
+
+// Matchmaking
+router.use('/matchmaking', require('./MatchMaking/index'));
+
+// News Articles
+router.get('/NewsArticles', require('./Core/newsArticles'));
+
+// Online Users
+router.use('/OnlineUsers', require('./OnlineUsers/index'));
+
+// Personas
+router.use('/personas', require('./Personas/index'));
+
+// Powerups
+router.use('/powerups', require('./Powerups/index'));
+
+// Promo Codes
+router.use('/PromoCode', require('./PromoCodes/index'));
+
+// Rebroadcasters
+router.get('/getrebroadcasters', require('./Core/Rebroadcasters'));
+
+// Region Information
+router.get('/getregioninfo', require('./Core/regionInfo'));
+
+// Reporting
+router.use('/Reporting', require('./Reporting/index'));
+
+// Security
+router.use('/security', require('./Security/index'));
+
+// Session
+router.use('/Session', require('./Session/index'));
+
+// Social
+router.use('/Social', require('./Social/index'));
+
+// System Info
+router.get('/systeminfo', require('./Core/systeminfo'));
+
+// User Routes
+router.use('/User', require('./User/index'));
 
 module.exports = router;
