@@ -24,7 +24,11 @@
 
 > Server is starting up.
 
+> Initialized runner APIs.
+
 ## To Do
+
+> Build the asset database.
 
 > Need to figure out the database schema and transactions.
 

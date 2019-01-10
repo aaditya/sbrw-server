@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/GetPermanentSession', require('./permSess'));
+router.post('/GetPermanentSession', require('./permSess'));
 router.get('/SecureLoginPersona')
 router.get('/SecureLogoutPersona')
 router.get('/createUser', require('./createUser'));
