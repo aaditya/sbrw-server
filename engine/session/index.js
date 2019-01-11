@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.get
+router.get('/GetChatInfo', require('./chat'));
 
 module.exports = router;
