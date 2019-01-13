@@ -1,0 +1,14 @@
+<chatServer>
+    <Rooms>
+        <% data.rooms.forEach(function(c){ %>
+        <chatRoom>
+            <channelCount><%= c.ID %></channelCount>
+            <longName><%= c.longName %></longName>
+            <shortName><%= c.shortName %></shortName>
+        </chatRoom>
+        <% }) %>
+    </Rooms>
+    <ip><%= data.ip %>></ip>
+    <port><%= data.port %></port>
+    <prefix><%= data.prefix %></prefix>
+</chatServer>

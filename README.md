@@ -24,6 +24,8 @@
 
 > Server is starting up.
 
+> Game is successfully booting up.
+
 > Initialized runner APIs.
 
 ## To Do
