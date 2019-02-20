@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('superSecret', config.settings.secret);
 
 // API backtracking
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 
 app.use('/soapbox-race-core/Engine.svc', require('./engine/routes'));
 app.use('/runner', require('./runner/routes'));

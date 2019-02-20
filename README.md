@@ -30,7 +30,7 @@
 
 ### Priority 1
 
-> Figure out content id numeric.
+> Figure out content id numeric. And non recurring.
 
 > Build the asset database. (partial)
 

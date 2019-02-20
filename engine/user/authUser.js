@@ -35,7 +35,7 @@ const authUser = (req, res) => {
                                 res.type('application/xml').render('handlers/auth.ejs', { data: data });
                             }
                             else {
-                                jwt.sign({ id: doc._id, email: doc.email }, req.app.get('superSecret'), (err, token) => {
+                                jwt.sign({ id: doc._id, email: doc.email, numId: doc.numId }, req.app.get('superSecret'), (err, token) => {
                                     if (err) {
                                         data = {
                                             "uid": 0,
@@ -45,7 +45,7 @@ const authUser = (req, res) => {
                                     }
                                     else {
                                         data = {
-                                            "uid": doc._id,
+                                            "uid": doc.numId,
                                             "token": token,
                                             "description": ""
                                         }

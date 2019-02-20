@@ -7,7 +7,7 @@ const protect = (req, res, next) => {
             res.status(500).send('');
         }
         else {
-            if (decoded.id == req.headers.userid) {
+            if (decoded.numId == req.headers.userid) {
                 req.decoded = decoded;
                 next();
             }

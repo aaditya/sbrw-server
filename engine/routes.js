@@ -20,7 +20,7 @@ router.get('/carclasses', require('./Core/carClasses'));
 router.use('/catalog', require('./Catalog/index'));
 
 // Driver Persona
-router.use('/DriverPersona', require('./DriverPersona/index'));
+router.use('/DriverPersona', auth, require('./DriverPersona/index'));
 
 // Event
 router.use('/event', require('./Event/index'));
