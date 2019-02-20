@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const protect = (req, res, next) => {
-    let token = req.headers.securitytoken || req.headers.x-access-token || req.body.token;
+    let token = req.headers.securitytoken || req.headers.securityToken;
     jwt.verify(token, req.app.get('superSecret'), (err, decoded) => {
         if (err) {
             res.status(500).send('');

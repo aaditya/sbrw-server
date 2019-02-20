@@ -20,27 +20,29 @@
 
 ## What's done
 
-> All the APIs have been listed as of now.
+> API List.
 
-> Server is starting up.
+> Auth.
 
-> Game is successfully booting up.
-
-> Initialized runner APIs.
+> Started driver persona.
 
 ## To Do
 
-> Build the asset database.
+### Priority 1
+
+> Figure out content id numeric.
+
+> Build the asset database. (partial)
 
 > Need to figure out the database schema and transactions.
+
+> Setup all the XML outputs.
+
+### Priority 2
 
 > XSD to EJS migrate.
 
 > UDP packet capturing.
-
-> Create basic file structure.
-
-> Setup all the XML outputs.
 
 > Figure out outputs.
 

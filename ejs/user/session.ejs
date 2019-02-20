@@ -1,26 +1,32 @@
 <UserInfo>
     <defaultPersonaIdx>0</defaultPersonaIdx>
     <personas>
+        <% data.personas.forEach(function(p) { %>
         <ProfileData>
-            <Boost>0.0</Boost>
-            <Cash>9833.0</Cash>
-            <IconIndex>17</IconIndex>
-            <Level>5</Level>
-            <Name>XSZD</Name>
-            <PercentToLevel>0.0</PercentToLevel>
-            <PersonaId>26968</PersonaId>
-            <Rating>0.0</Rating>
-            <Rep>0.0</Rep>
-            <RepAtCurrentLevel>0</RepAtCurrentLevel>
-            <Score>0</Score>
+            <Boost><%= p.boost %></Boost>
+            <Cash><%= p.cash %></Cash>
+            <IconIndex><%= p.iconIndex %></IconIndex>
+            <Level><%= p.level %></Level>
+            <Name><%= p.name %></Name>
+            <PercentToLevel><%= p.percentToLevel %></PercentToLevel>
+            <PersonaId><%= p._id %></PersonaId>
+            <Rating><%= p.rating %></Rating>
+            <Rep><%= p.rep %></Rep>
+            <RepAtCurrentLevel><%= p.repAtCurrentLevel %></RepAtCurrentLevel>
+            <Score><%= p.score %></Score>
         </ProfileData>
+        <% }); %>
     </personas>
     <user>
         <fullGameAccess>false</fullGameAccess>
         <isComplete>false</isComplete>
         <remoteUserId>0</remoteUserId>
-        <securityToken>9b2612a1-fd91-41c9-95be-a255f4effd88</securityToken>
-        <subscribeMsg>false</subscribeMsg>
-        <userId>26083</userId>
+        <securityToken>
+            <%= data.token %>
+        </securityToken>
+        <subscribeMsg></subscribeMsg>
+        <userId>
+            <%= data.id %>
+        </userId>
     </user>
 </UserInfo>

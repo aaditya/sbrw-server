@@ -25,22 +25,34 @@ const authUser = (req, res) => {
                         res.type('application/xml').render('handlers/auth.ejs', { data: data });
                     }
                     else if (result) {
-                        jwt.sign({ id: doc._id, email: doc.email }, req.app.get('superSecret'), (err, token) => {
+                        userModel.findByIdAndUpdate(doc._id, { status: 1 }, (err, doc) => {
                             if (err) {
                                 data = {
                                     "uid": 0,
                                     "token": "",
                                     "description": "LOGIN ERROR"
                                 }
+                                res.type('application/xml').render('handlers/auth.ejs', { data: data });
                             }
                             else {
-                                data = {
-                                    "uid": doc._id,
-                                    "token": token,
-                                    "description": ""
-                                }
+                                jwt.sign({ id: doc._id, email: doc.email }, req.app.get('superSecret'), (err, token) => {
+                                    if (err) {
+                                        data = {
+                                            "uid": 0,
+                                            "token": "",
+                                            "description": "LOGIN ERROR"
+                                        }
+                                    }
+                                    else {
+                                        data = {
+                                            "uid": doc._id,
+                                            "token": token,
+                                            "description": ""
+                                        }
+                                    }
+                                    res.type('application/xml').render('handlers/auth.ejs', { data: data });
+                                });
                             }
-                            res.type('application/xml').render('handlers/auth.ejs', { data: data });
                         });
                     }
                     else {

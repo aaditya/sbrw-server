@@ -6,6 +6,6 @@
         "port": 8680
     },
     "database": {
-        "url": "mongodb://localhost:27017/sbrw"
+        "url": "mongodb+srv://admin:nwI6lHjcJwFtyUGl@sbrw-assets-tdy4d.mongodb.net/base?retryWrites=true"
     }
 }

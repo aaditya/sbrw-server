@@ -3,7 +3,9 @@ const router = express.Router();
 
 // Miscellaneous functions.
 const auth = require('./User/tokenVerify');
-const logger = require('../system/misc/logger');
+const logger = require('./Miscellaneous/logger');
+
+router.use(logger);
 
 // Achievements
 router.use('/achievements', require('./Achievements/index'));
@@ -18,7 +20,7 @@ router.get('/carclasses', require('./Core/carClasses'));
 router.use('/catalog', require('./Catalog/index'));
 
 // Driver Persona
-router.use('/DriverPersona', logger, require('./DriverPersona/index'));
+router.use('/DriverPersona', require('./DriverPersona/index'));
 
 // Event
 router.use('/event', require('./Event/index'));
@@ -43,6 +45,9 @@ router.get('/getsocialnetworkinfo', require('./Core/getSocialNetwork'));
 
 // Get User Settings
 router.get('/getusersettings', require('./Core/userSettings'));
+
+// Set User Settings
+router.put('/setusersettings', require('./Core/setUserSettings'));
 
 // FriendList
 router.get('/getfriendlistfromuserid', require('./Core/friendList'));
