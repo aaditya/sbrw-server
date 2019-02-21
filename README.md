@@ -2,6 +2,8 @@
 
 ## Description
 
+> Currently, I have stopped developing this due to time constraints, however if you would like to continue on to build this yourself, just clone and start.
+
 > This is the soap-box race world server developed in NodeJS.
 
 ## Requirements

@@ -8,6 +8,6 @@ router.post('/GetPermanentSession', auth, require('./permSess'));
 // router.get('/SecureLogoutPersona')
 router.get('/createUser', require('./createUser'));
 router.get('/authenticateUser', require('./authUser'));
-router.get('/SecureLogout', require('./logoutUser'));
+router.post('/SecureLogout', require('./logoutUser'));
 
 module.exports = router;

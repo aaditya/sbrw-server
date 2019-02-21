@@ -13,7 +13,7 @@ const server = {
 
 let port = process.env.PORT || config.server.port;
 
-mongoose.connect(config.database.url, { useNewUrlParser: true }, (err) => {
+mongoose.connect(config.database.local, { useNewUrlParser: true }, (err) => {
     if (err) {
         console.log(err.message);
     }

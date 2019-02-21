@@ -2,6 +2,7 @@ const personaModel = require(__base + 'models/driverPersona.js');
 
 const registerPersona = (req, res) => {
     personaModel.find({}).exec((err, major) => {
+        
         if (err) {
             res.status(500).send('Server Error');
         }

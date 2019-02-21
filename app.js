@@ -23,7 +23,7 @@ app.set('superSecret', config.settings.secret);
 // API backtracking
 app.use(morgan('dev'));
 
-app.use('/soapbox-race-core/Engine.svc', require('./engine/routes'));
+app.use('/soapbox-race-core/Engine.svc', require('./modules/routes'));
 app.use('/runner', require('./runner/routes'));
 
 module.exports = app;
