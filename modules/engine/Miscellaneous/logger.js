@@ -1,10 +1,11 @@
+const colors = require('colors');
+
 const loggerFunc = (req, res, next) => {
-    console.log('----------------------------------------')
+    console.log('----------------------------------------'.green);
+    console.log('Queries:', req.query);
     console.log('Headers:', req.headers);
     console.log('Body:', req.body);
-    console.log('URL:', req.originalUrl);
-    console.log('Method:', req.method);
-    console.log('---------------------------------------')
+    console.log('----------------------------------------'.red);
     next();
 }
 

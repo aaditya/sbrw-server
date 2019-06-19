@@ -33,5 +33,8 @@
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.2",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "colors": "^1.3.3"
   }
 }

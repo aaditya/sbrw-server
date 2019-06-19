@@ -7,7 +7,6 @@ const driverPersona = new schema({
     curCarIndex: Number,
     iconIndex: Number,
     level: Number,
-    numId: Number,
     motto: String,
     name: String,
     percentToLevel: Number,

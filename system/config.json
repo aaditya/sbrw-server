@@ -2,7 +2,8 @@
     "details": {
         "database": "mongodb://localhost:27017/sbrw",
         "PORT": 8680,
-        "sign": "sbrwTestingSign"
+        "sign": "sbrwTestingSign",
+        "xkey": "0?fC{-@v7_2_{b&GR521?g*ZH56_9<8u"
     },
     "features": {
         "udp": true,

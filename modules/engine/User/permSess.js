@@ -7,7 +7,7 @@ const permSess = (req, res) => {
         }
         else {
             let data = {
-                id: req.decoded.numId,
+                id: req.decoded.id,
                 token: req.headers.securityToken || req.headers.securitytoken,
                 personas: doc
             }

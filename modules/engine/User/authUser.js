@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const userModel = require(__base + 'models/user');
+const ecr = require('../Miscellaneous/crypt');
 
 const authUser = (req, res) => {
     userModel.findOne({ email: req.query.email }, (err, doc) => {
@@ -14,7 +15,7 @@ const authUser = (req, res) => {
             res.type('application/xml').render('handlers/auth.ejs', { data: data });
         }
         else {
-            if (doc && doc.password) {
+            if (doc) {
                 bcrypt.compare(req.query.password, doc.password, (err, result) => {
                     if (err) {
                         data = {
@@ -35,7 +36,7 @@ const authUser = (req, res) => {
                                 res.type('application/xml').render('handlers/auth.ejs', { data: data });
                             }
                             else {
-                                jwt.sign({ id: doc._id, email: doc.email, numId: doc.numId }, req.app.get('superSecret'), (err, token) => {
+                                jwt.sign({ id: doc._id }, req.app.get('tokenSign'), (err, token) => {
                                     if (err) {
                                         data = {
                                             "uid": 0,
@@ -44,9 +45,10 @@ const authUser = (req, res) => {
                                         }
                                     }
                                     else {
+                                        let etok = ecr.xcrypt(token);
                                         data = {
-                                            "uid": doc.numId,
-                                            "token": token,
+                                            "uid": 1,
+                                            "token": etok,
                                             "description": ""
                                         }
                                     }
