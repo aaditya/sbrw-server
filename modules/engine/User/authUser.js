@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const userModel = require('../../models/user');
+const userModel = require(__base + 'models/user');
 
 const authUser = (req, res) => {
     userModel.findOne({ email: req.query.email }, (err, doc) => {

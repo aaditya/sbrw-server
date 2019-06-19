@@ -11,19 +11,19 @@ const app = express();
 const config = require('./system/config.json');
 
 // XML/HTML Rendering Engine
-app.set('views', path.join(__dirname, 'ejs'));
+app.set('views', path.join(__dirname, 'modules/renders'));
 app.set('view engine', 'ejs');
 
 // POST request parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.set('superSecret', config.settings.secret);
+app.set('tokenSign', config.details.sign);
 
 // API backtracking
 app.use(morgan('dev'));
 
-app.use('/soapbox-race-core/Engine.svc', require('./modules/routes'));
-app.use('/runner', require('./runner/routes'));
+app.use('/soapbox-race-core/Engine.svc', require('./modules/engine/routes'));
+app.use('/runner', require('./modules/runner/routes'));
 
 module.exports = app;

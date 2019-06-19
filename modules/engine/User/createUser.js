@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const userModel = require('../../models/user');
+const userModel = require(__base + 'models/user');
 
 const register = (req, res) => {
     userModel.find({}).exec((err, users) => {

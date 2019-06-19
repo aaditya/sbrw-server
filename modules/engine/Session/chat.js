@@ -1,4 +1,4 @@
-const chatRoomSchema = require('../../models/chatRooms');
+const chatRoomSchema = require(__base + 'models/chatRooms');
 
 const chatInfo = (req, res) => {
     chatRoomSchema.find({}).exec((err, doc) => {

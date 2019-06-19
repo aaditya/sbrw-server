@@ -1,4 +1,4 @@
-const chatRooms = require('../../models/chatRooms');
+const chatRooms = require(__base + 'models/chatRooms');
 
 module.exports = (req, res) => {
     chatRooms.find({}).exec((err, doc) => {

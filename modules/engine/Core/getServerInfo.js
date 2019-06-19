@@ -1,5 +1,5 @@
-const package = require('../../package.json');
-const info = require('../../system/info.json');
+const package = require('../../../package.json');
+const info = require(__base + 'system/config.json').info;
 
 const userModel = require(__base + 'models/user.js');
 

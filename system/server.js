@@ -1,19 +1,16 @@
 const http = require('http');
-// const dgram = require('dgram');
 
 const mongoose = require('mongoose');
 
 const config = require('./config.json');
 const app = require('../app');
 
-const server = {
-    http: http.createServer(app),
-    // udp: dgram.createSocket('udp4')
-}
+const server = http.createServer(app);
+const userver = require('./udpServer');
 
-let port = process.env.PORT || config.server.port;
+let port = process.env.PORT || config.details.PORT;
 
-mongoose.connect(config.database.local, { useNewUrlParser: true }, (err) => {
+mongoose.connect(config.details.database, { useNewUrlParser: true }, (err) => {
     if (err) {
         console.log(err.message);
     }
@@ -22,24 +19,12 @@ mongoose.connect(config.database.local, { useNewUrlParser: true }, (err) => {
     }
 })
 
-// server.udp.on('error', (err) => {
-//   console.log(`server error:\n${err.stack}`);
-//   server.close();
-// });
+if (config.features.udp) {
+    userver.bind(port);
+}
 
-// server.udp.on('message', (msg, rinfo) => {
-//   console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
-// });
-
-// server.udp.on('listening', () => {
-//   const address = server.udp.address();
-//   console.log(`UDP server listening on ${address.address}:${address.port}`);
-// });
-
-// server.udp.bind(port);
-
-server.http.listen(port, () => {
-    console.log(`HTTP server listening on port ${port}.`);
+server.listen(port, () => {
+    console.log(`HTTP server active on ${port}.`);
 });
 
 module.exports = server;
