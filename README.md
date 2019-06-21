@@ -24,6 +24,8 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 
 ### Working Modules
 
+* Delete Driver Persona Works Internally, need to fix In Game error.
+
 * Products in Category 
 
 * Create Driver Persona.
@@ -39,6 +41,8 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 ## To Do
 
 ### Priority 1
+
+* Baskets
 
 * Persona Routes
 
