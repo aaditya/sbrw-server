@@ -1,6 +1,6 @@
 # Soapbox Race World Server
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity) [![GitHub license](https://img.shields.io/eclipse-marketplace/l/sbrw.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity) [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
 
 ## Description
 
