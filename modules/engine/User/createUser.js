@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const userModel = require(__base + 'models/user');
+const ecr = require('../Miscellaneous/crypt');
 
 const register = (req, res) => {
     userModel.findOne({ "email": req.query.email }, (err, doc) => {
@@ -56,9 +57,10 @@ const register = (req, res) => {
                                         }
                                     }
                                     else {
+                                        let etok = ecr.xcrypt(token);
                                         data = {
                                             "uid": doc._id,
-                                            "token": token,
+                                            "token": etok,
                                             "description": ""
                                         }
                                         res.type('application/xml').render('handlers/auth.ejs', { data: data });
