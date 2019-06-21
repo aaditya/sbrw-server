@@ -1,5 +1,7 @@
 # Soapbox Race World Server
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity) [![GitHub license](https://img.shields.io/eclipse-marketplace/l/sbrw.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
+
 ## Description
 
 This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it is. The primary focus is on server performance and multi user concurrency.
