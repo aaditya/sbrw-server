@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it originally was, the pricing system even the SpeedBoost system and get rid of the level system and other 'new' additions making the server different.
+This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it is. The primary focus is on server performance and multi user concurrency.
 
 ## Requirements
 
@@ -20,11 +20,17 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 
 ## What's done
 
-* API List.
+### Working Modules
+
+* Products in Category 
+
+* Create Driver Persona.
 
 * Auth.
 
-* Started driver persona.
+### Miscellaneous
+
+* API List.
 
 * UDP server setup.
 
@@ -32,11 +38,9 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 
 ### Priority 1
 
-* Build the asset database. (partial)
+* Persona Routes
 
-* Need to figure out the database schema and transactions.
-
-* Setup the XML outputs.
+* Will add more as I develop further.
 
 ### Priority 2
 

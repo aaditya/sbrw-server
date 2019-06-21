@@ -16,7 +16,7 @@ const registerPersona = (req, res) => {
                     rep: 0,
                     repAtCurrLvl: 0,
                     score: 0,
-                    boost: 10000,
+                    boost: 0,
                     cash: 300000,
                     iconIndex: req.query.iconIndex,
                     level: 1,

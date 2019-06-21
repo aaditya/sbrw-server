@@ -10,10 +10,10 @@
         "cors": true
     },
     "info": {
-        "messageSrv": "Dummy Message",
-        "serverName": "Local Node",
-        "country": "IN",
-        "adminList": "XSZD",
+        "messageSrv": "Server Message",
+        "serverName": "Server Name",
+        "country": "US",
+        "adminList": "[Can, Be, Array]",
         "bannerUrl": null,
         "discordUrl": null,
         "facebookUrl": null,
@@ -21,7 +21,7 @@
         "allowedCountries": "",
         "maxOnlinePlayers": 100,
         "newsUrl": null,
-        "ownerList": "XSZD",
+        "ownerList": "[Can, Be, Array]",
         "timezone": "0",
         "activatedHolidaySceneryGroups": [
             "SCENERY_GROUP_CHRISTMAS",

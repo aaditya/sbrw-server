@@ -1,0 +1,18 @@
+<ArrayOfProductTrans>
+    <% data.forEach(function(i) {%>
+    <ProductTrans>
+        <Currency><%= i.currency %></Currency>
+        <DurationMinute><%= i.durationMinute %></DurationMinute>
+        <Hash><%= i.hash %></Hash>
+        <Icon><%= i.icon %></Icon>
+        <Level><%= i.minLevel %></Level>
+        <Price><%= i.price %></Price>
+        <Priority><%= i.priority %></Priority>
+        <ProductId><%= i.productId %></ProductId>
+        <ProductTitle><%= i.productTitle %></ProductTitle>
+        <ProductType><%= i.productType %></ProductType>
+        <SecondaryIcon><%= i.secondaryIcon %></SecondaryIcon>
+        <UseCount><%= i.useCount %></UseCount>
+    </ProductTrans>
+    <% }); %>
+</ArrayOfProductTrans>
