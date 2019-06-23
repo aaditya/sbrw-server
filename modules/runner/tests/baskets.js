@@ -1,7 +1,7 @@
-const products = require(__base + 'models/products');
+const baskets = require(__base + 'models/baskets');
 
-const productInfo = (req, res) => {
-    products.find({}).exec((err, doc) => {
+const basketsInfo = (req, res) => {
+    baskets.find({}).exec((err, doc) => {
         if (err) {
             console.log(err);
         }
@@ -13,4 +13,4 @@ const productInfo = (req, res) => {
     });
 }
 
-module.exports = productInfo;
+module.exports = basketsInfo;
