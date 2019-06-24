@@ -1,8 +1,8 @@
 const getReBroadcasters = (req, res) => {
     res.send(`<ArrayOfUdpRelayInfo>
     <UdpRelayInfo>
-        <Host>78.107.251.45</Host>
-        <Port>9999</Port>
+        <Host>127.0.0.1</Host>
+        <Port>8680</Port>
     </UdpRelayInfo>
 </ArrayOfUdpRelayInfo>`);
 }

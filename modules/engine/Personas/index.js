@@ -3,7 +3,7 @@ const router = express.Router();
 
 // router.post('/:pid/commerce', require('./commerce'));
 
-// router.post('/:pid/baskets', require('./baskets'));
+router.post('/:pid/baskets', require('./baskets'));
 
 router.get('/:pid/carslots', require('./carslots'));
 

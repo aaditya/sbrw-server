@@ -1,5 +1,5 @@
 const heartbeat = (req, res) => {
-    res.send('');
+    res.type('application/xml').render('core/heartbeat');
 }
 
 module.exports = heartbeat;

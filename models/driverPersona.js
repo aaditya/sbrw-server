@@ -14,7 +14,8 @@ const driverPersona = new schema({
     rep: Number,
     repAtCurrLvl: Number,
     score: Number,
-    user: mongoose.Schema.Types.ObjectId
+    user: mongoose.Schema.Types.ObjectId,
+    stamp: Number
 });
 
 module.exports = mongoose.model('driverpersona', driverPersona);

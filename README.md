@@ -4,13 +4,13 @@
 
 ## Description
 
-This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it is. The primary focus is on server performance and multi user concurrency.
+This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it is.
 
 ## Requirements
 
-* NodeJS (Preferrably the latest release.)
+* NodeJS (v10+)
 
-* NPM or Yarn
+* NPM
 
 * MongoDB 
 
@@ -24,11 +24,9 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 
 ### Working Modules
 
-* Delete Driver Persona Works Internally, need to fix In Game error.
-
 * Products in Category 
 
-* Create Driver Persona.
+* Create/Delete Driver Persona.
 
 * Auth.
 
@@ -49,6 +47,8 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 * Will add more as I develop further.
 
 ### Priority 2
+
+* Intuitive Logger Function.
 
 * UDP packet capturing.
 

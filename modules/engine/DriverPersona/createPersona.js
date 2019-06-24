@@ -21,7 +21,8 @@ const registerPersona = (req, res) => {
                     iconIndex: req.query.iconIndex,
                     level: 1,
                     name: req.query.name,
-                    user: req.decoded.id
+                    user: req.decoded.id,
+                    stamp: new Date().getTime()
                 });
                 newPersona.save((err, profile) => {
                     if (err) {

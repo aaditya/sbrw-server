@@ -1,7 +1,11 @@
 <UserInfo>
-    <defaultPersonaIdx>0</defaultPersonaIdx>
+    <% if (data.personas.length > 0) { %>
+    <defaultPersonaIdx><%= data.personas[0].stamp %></defaultPersonaIdx>
+    <% } else { %>
+    <defaultPersonaIdx></defaultPersonaIdx>
+    <% } %>
     <personas>
-        <% data.personas.forEach(function(p, i) { %>
+        <% data.personas.forEach(function(p) { %>
         <ProfileData>
             <Boost><%= p.boost %></Boost>
             <Cash><%= p.cash %></Cash>
@@ -9,7 +13,7 @@
             <Level><%= p.level %></Level>
             <Name><%= p.name %></Name>
             <PercentToLevel><%= p.percentToLevel %></PercentToLevel>
-            <PersonaId><%= i %>></PersonaId>
+            <PersonaId><%= p.stamp %></PersonaId>
             <Rating><%= p.rating %></Rating>
             <Rep><%= p.rep %></Rep>
             <RepAtCurrentLevel><%= p.repAtCurrentLevel %></RepAtCurrentLevel>
