@@ -6,6 +6,8 @@ const path = require('path');
 /* Global Path setup for easy require */
 global.__base = __dirname + '/';
 
+require('body-parser-xml')(bodyParser);
+
 const app = express();
 
 const config = require('./system/config.json');
@@ -16,6 +18,7 @@ app.set('view engine', 'ejs');
 
 // POST request parsing
 app.use(bodyParser.json());
+app.use(bodyParser.xml());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('tokenSign', config.details.sign);
