@@ -1,10 +1,14 @@
-# Soapbox Race World Server
+# RaceSphere Zenith Server
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity) [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
+[![dependencies Status](https://david-dm.org/racesphere/rs-zenith/status.svg)](https://david-dm.org/racesphere/rs-zenith)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
 
 ## Description
 
-This is a Javascript rewrite of the original Soapbox Race server which was developed in Java. The primary goal is to get everything how it is.
+This is a compatible server for Need For Speed World game, this project is still a work in progress.
+
+Currently, the server supports the SoapBox Race World Launcher.
 
 ## Requirements
 
@@ -45,6 +49,10 @@ This is a Javascript rewrite of the original Soapbox Race server which was devel
 * Persona Routes
 
 * Will add more as I develop further.
+
+* Maintain all the dependencies.
+
+* Make an exclusive compatible launcher.
 
 ### Priority 2
 

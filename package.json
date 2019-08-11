@@ -1,7 +1,7 @@
 {
-  "name": "sbrw-server",
+  "name": "rs-zenith",
   "version": "1.0.0",
-  "description": "This is a soap-box race world server setup ported in NodeJS.",
+  "description": "This is a Need for Speed world server in NodeJS.",
   "main": "system/server.js",
   "scripts": {
     "start": "node system/server.js",
@@ -9,22 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aadityachakravarty/sbrw-server.git"
+    "url": "git+https://github.com/racesphere/rs-zenith.git"
   },
   "keywords": [
     "NFSW",
-    "Soapbox",
+    "Need",
+    "For",
+    "Speed",
     "Race",
     "World",
-    "Javascript",
     "Multiplayer"
   ],
-  "author": "Aaditya Chakravarty",
+  "author": "Team Racesphere",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/aadityachakravarty/sbrw-server/issues"
+    "url": "https://github.com/racesphere/rs-zenith/issues"
   },
-  "homepage": "https://github.com/aadityachakravarty/sbrw-server#readme",
+  "homepage": "https://github.com/racesphere/rs-zenith#readme",
   "dependencies": {
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
