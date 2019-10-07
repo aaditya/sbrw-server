@@ -1,4 +1,4 @@
-# RaceSphere Zenith Server
+# NFSW Server
 
 [![dependencies Status](https://david-dm.org/racesphere/rs-zenith/status.svg)](https://david-dm.org/racesphere/rs-zenith)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity)
