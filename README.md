@@ -46,7 +46,7 @@ Currently, the server supports the SoapBox Race World Launcher.
 
 * Baskets
 
-* Persona Routes
+* Personal Routes
 
 * Will add more as I develop further.
 
