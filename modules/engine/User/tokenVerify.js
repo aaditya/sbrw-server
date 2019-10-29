@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const ecr = require('../Miscellaneous/crypt');
+const { logger } = require('../../../utils/logger');
 
 const protect = (req, res, next) => {
     let token = req.headers.securitytoken || req.headers.securityToken;
@@ -16,7 +17,7 @@ const protect = (req, res, next) => {
                 // verifies secret and checks exp
                 jwt.verify(decrypt, req.app.get('tokenSign'), (err, decoded) => {
                     if (err) {
-                        console.log(err.message);
+                        logger.info(err.message);
                         res.status(500).send();
                     }
                     else {

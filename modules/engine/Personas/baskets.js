@@ -1,5 +1,6 @@
 const baskets = require(__base + 'models/baskets');
 const flatten = require('../Miscellaneous/tree');
+const { logger } = require('../../../utils/logger');
 
 const basket = (req, res) => {
     let body = flatten(req.body).BasketTrans.Items.BasketItemTrans;
@@ -8,10 +9,10 @@ const basket = (req, res) => {
             res.status(500).send('');
         }
         else {
-            console.log(doc);
+            logger.info(doc);
         }
     });
     res.send('');
-}
+};
 
 module.exports = basket;

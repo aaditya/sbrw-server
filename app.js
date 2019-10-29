@@ -1,7 +1,10 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const morgan = require('morgan');
+const expressWinston = require('express-winston');
+const winston = require('winston');
 const path = require('path');
+
+const { options: loggerOptions } = require('./utils/logger');
 
 /* Global Path setup for easy require */
 global.__base = __dirname + '/';
@@ -24,9 +27,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('tokenSign', config.details.sign);
 
 // API backtracking
-app.use(morgan('dev'));
+app.use(expressWinston.logger(loggerOptions));
 
 app.use('/soapbox-race-core/Engine.svc', require('./modules/engine/routes'));
 app.use('/runner', require('./modules/runner/routes'));
+
+app.use(expressWinston.errorLogger(loggerOptions));
 
 module.exports = app;

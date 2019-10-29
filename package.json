@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a Need for Speed world server in NodeJS.",
   "main": "system/server.js",
+  "engines": {
+    "node": ">=10.10 <10.15.3"
+  },
   "scripts": {
     "start": "node system/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,9 +35,10 @@
     "body-parser-xml": "^1.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-winston": "4.0.1",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.2",
-    "morgan": "^1.9.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "winston": "3.2.1"
   }
 }
