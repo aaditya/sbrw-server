@@ -8,23 +8,22 @@ const app = require('../app');
 const server = http.createServer(app);
 const userver = require('./udpServer');
 
-let port = process.env.PORT || config.details.PORT;
+const port = process.env.PORT || config.details.PORT;
 
 mongoose.connect(config.details.database, { useNewUrlParser: true }, (err) => {
-    if (err) {
-        console.log(err.message);
-    }
-    else {
-        console.log('Database Connected');
-    }
-})
+  if (err) {
+    console.log(err.message);
+  } else {
+    console.log('Database Connected');
+  }
+});
 
 if (config.features.udp) {
-    userver.bind(port);
+  userver.bind(port);
 }
 
 server.listen(port, () => {
-    console.log(`HTTP server active on ${port}.`);
+  console.log(`HTTP server active on ${port}.`);
 });
 
 module.exports = server;

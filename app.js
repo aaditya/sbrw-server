@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 
 /* Global Path setup for easy require */
-global.__base = __dirname + '/';
+global.__base = `${__dirname}/`;
 
 require('body-parser-xml')(bodyParser);
 

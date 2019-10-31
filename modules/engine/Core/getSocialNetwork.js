@@ -1,5 +1,5 @@
 const socialNetwork = (req, res) => {
-    res.send('');
-}
+  res.send('');
+};
 
 module.exports = socialNetwork;

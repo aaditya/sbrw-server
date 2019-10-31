@@ -1,5 +1,5 @@
-module.exports = (req,res) => {
-    res.send(`<LoginAnnouncementsDefinition>
+module.exports = (req, res) => {
+  res.send(`<LoginAnnouncementsDefinition>
     <Announcements>
         <LoginAnnouncementDefinition>
             <Context>NotApplicable</Context>
@@ -35,5 +35,5 @@ module.exports = (req,res) => {
         </LoginAnnouncementDefinition>
     </Announcements>
     <ImagesPath>http://i.imgur.com/</ImagesPath>
-</LoginAnnouncementsDefinition>`)
-}
+</LoginAnnouncementsDefinition>`);
+};

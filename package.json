@@ -5,7 +5,8 @@
   "main": "system/server.js",
   "scripts": {
     "start": "node system/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,10 @@
     "mongoose": "^5.4.2",
     "morgan": "^1.9.1",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2"
   }
 }

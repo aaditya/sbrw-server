@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    res.send(`
+  res.send(`
     <OwnedCarTrans>
     <CustomCar>
         <BaseCar>-951615808</BaseCar>
@@ -127,5 +127,5 @@ module.exports = (req, res) => {
     <Heat>1.0</Heat>
     <Id>119455</Id>
     <OwnershipType>CustomizedCar</OwnershipType>
-</OwnedCarTrans>`)
-}
+</OwnedCarTrans>`);
+};

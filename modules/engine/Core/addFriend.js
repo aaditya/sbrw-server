@@ -1,5 +1,5 @@
 const addFriend = (req, res) => {
-    res.send('');
-}
+  res.send('');
+};
 
 module.exports = addFriend;

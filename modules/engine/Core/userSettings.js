@@ -1,5 +1,5 @@
 const getUserSettings = (req, res) => {
-    res.send(`
+  res.send(`
     <User_Settings>
     <CarCacheAgeLimit>600</CarCacheAgeLimit>
     <IsRaceNowEnabled>true</IsRaceNowEnabled>
@@ -20,6 +20,6 @@ const getUserSettings = (req, res) => {
     <starterPackApplied>false</starterPackApplied>
     <userId>26083</userId>
 </User_Settings>`);
-}
+};
 
 module.exports = getUserSettings;
