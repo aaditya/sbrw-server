@@ -34,7 +34,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "5.7.7",
+    "mongoose": "5.7.12",
     "morgan": "^1.9.1",
     "uuid": "^3.3.2"
   }
