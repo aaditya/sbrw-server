@@ -1,8 +1,7 @@
 const http = require('http');
 
 const mongoose = require('mongoose');
-
-const config = require('./config.json');
+const config = require('config');
 const app = require('../app');
 
 const server = http.createServer(app);
@@ -10,14 +9,19 @@ const userver = require('./udpServer');
 
 let port = process.env.PORT || config.details.PORT;
 
-mongoose.connect(config.details.database, { useNewUrlParser: true }, (err) => {
+mongoose.connect(
+    config.details.database,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }, (err) => {
     if (err) {
         console.log(err.message);
     }
     else {
         console.log('Database Connected');
     }
-})
+});
 
 if (config.features.udp) {
     userver.bind(port);
