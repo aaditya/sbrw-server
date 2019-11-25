@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const algorithm = 'aes-256-gcm';
-const config = require(__base + 'system/config.json');
+const config = require('config');
 
 const iv = Buffer.from(crypto.randomBytes(16));
 

@@ -33,11 +33,12 @@
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "body-parser-xml": "^1.1.0",
+    "config": "3.2.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-winston": "4.0.1",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.2",
+    "mongoose": "5.7.12",
     "uuid": "^3.3.2",
     "winston": "3.2.1"
   }

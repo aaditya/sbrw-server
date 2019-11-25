@@ -13,7 +13,7 @@ require('body-parser-xml')(bodyParser);
 
 const app = express();
 
-const config = require('./system/config.json');
+const config = require('config');
 
 // XML/HTML Rendering Engine
 app.set('views', path.join(__dirname, 'modules/renders'));

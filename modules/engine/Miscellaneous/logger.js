@@ -1,6 +1,6 @@
 const fs = require('fs');
 const uuid = require('uuid/v1')();
-const config = require(__base + 'system/config.json');
+const config = require('config');
 
 const loggerFunc = (req, res, next) => {
     if (config.features.logger) {
