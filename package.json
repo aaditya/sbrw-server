@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/racesphere/rs-zenith#readme",
   "dependencies": {
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "body-parser-xml": "^1.1.0",
     "config": "3.2.4",
