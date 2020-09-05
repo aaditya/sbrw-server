@@ -1,30 +1,24 @@
 # NFSW Server
 
-[![dependencies Status](https://david-dm.org/racesphere/rs-zenith/status.svg)](https://david-dm.org/racesphere/rs-zenith)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aadityachakravarty/sbrw-server/graphs/commit-activity)
-[![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aadityachakravarty/sbrw-server/blob/master/LICENSE)
+[![dependencies Status](https://david-dm.org/aaditya/sbrw-server/status.svg)](https://david-dm.org/aaditya/sbrw-server)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aaditya/sbrw-server/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aaditya/sbrw-server/blob/master/LICENSE)
 
 ## Description
 
 Everything is broken right now. Need to rebuild asset database and create assetdb installer.
 
-This is a compatible server for Need For Speed World game, this project is still a work in progress.
-
-Currently, the server supports the SoapBox Race World Launcher.
-
 ## Requirements
 
-* NodeJS (v10+)
-
-* NPM
+* NodeJS (v12+) + NPM / Yarn
 
 * MongoDB 
 
 ## Installation and Running
 
-* npm i
+* npm i (or yarn add)
 
-* npm start
+* npm run start-dev
 
 ## What's done
 
