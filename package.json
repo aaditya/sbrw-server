@@ -1,18 +1,20 @@
 {
-  "name": "rs-zenith",
-  "version": "1.0.0",
-  "description": "This is a Need for Speed world server in NodeJS.",
-  "main": "system/server.js",
+  "name": "sbrw-server",
+  "version": "0.1.0",
+  "description": "SBRW Server (Beta)",
+  "main": "index.js",
   "scripts": {
-    "start": "node system/server.js",
+    "start": "node index.js",
+    "start-dev": "nodemon -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/racesphere/rs-zenith.git"
+    "url": "git+https://github.com/aaditya/sbrw-server.git"
   },
   "keywords": [
     "NFSW",
+    "SBRW",
     "Need",
     "For",
     "Speed",
@@ -20,22 +22,27 @@
     "World",
     "Multiplayer"
   ],
-  "author": "Team Racesphere",
+  "author": "Aaditya Chakravarty",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/racesphere/rs-zenith/issues"
+    "url": "https://github.com/aaditya/sbrw-server/issues"
   },
-  "homepage": "https://github.com/racesphere/rs-zenith#readme",
+  "homepage": "https://github.com/aaditya/sbrw-server#readme",
   "dependencies": {
-    "bcrypt": "^3.0.2",
-    "body-parser": "^1.18.3",
-    "body-parser-xml": "^1.1.0",
-    "config": "3.2.4",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "jsonwebtoken": "^8.4.0",
-    "mongoose": "5.7.12",
-    "morgan": "^1.9.1",
-    "uuid": "^3.3.2"
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "body-parser-xml": "^2.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4",
+    "sinon": "^9.0.3"
   }
 }

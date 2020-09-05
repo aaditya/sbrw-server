@@ -1,0 +1,34 @@
+<UserInfo>
+    <% if (data.personas.length > 0) { %>
+    <defaultPersonaIdx><%= data.personas[0].stamp %></defaultPersonaIdx>
+    <% } else { %>
+    <defaultPersonaIdx></defaultPersonaIdx>
+    <% } %>
+    <personas>
+        <% data.personas.forEach(function(p) { %>
+        <ProfileData>
+            <Boost><%= p.boost %></Boost>
+            <Cash><%= p.cash %></Cash>
+            <IconIndex><%= p.iconIndex %></IconIndex>
+            <Level><%= p.level %></Level>
+            <Name><%= p.name %></Name>
+            <PercentToLevel><%= p.percentToLevel %></PercentToLevel>
+            <PersonaId><%= p.stamp %></PersonaId>
+            <Rating><%= p.rating %></Rating>
+            <Rep><%= p.rep %></Rep>
+            <RepAtCurrentLevel><%= p.repAtCurrentLevel %></RepAtCurrentLevel>
+            <Score><%= p.score %></Score>
+        </ProfileData>
+        <% }); %>
+    </personas>
+    <user>
+        <fullGameAccess>false</fullGameAccess>
+        <isComplete>false</isComplete>
+        <remoteUserId>0</remoteUserId>
+        <securityToken>
+            <%= data.token %>
+        </securityToken>
+        <subscribeMsg></subscribeMsg>
+        <userId>1</userId>
+    </user>
+</UserInfo>

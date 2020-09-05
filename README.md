@@ -6,6 +6,8 @@
 
 ## Description
 
+Everything is broken right now. Need to rebuild asset database and create assetdb installer.
+
 This is a compatible server for Need For Speed World game, this project is still a work in progress.
 
 Currently, the server supports the SoapBox Race World Launcher.
