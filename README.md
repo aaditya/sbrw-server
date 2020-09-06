@@ -6,13 +6,9 @@
 
 ## Description
 
-Everything is broken right now. 
+Need to build asset db first then you can go login to server. 
 
-Need to rebuild asset database and create assetdb installer.
-
-Need to correct code as per linting guide.
-
-If you want to contribute, you might want to change the linting rule linebreak-style as I primarily develop in Windows.
+If you want to contribute, you might want to change the linting rule linebreak-style.
 
 ## Requirements
 
@@ -20,13 +16,34 @@ If you want to contribute, you might want to change the linting rule linebreak-s
 
 * MongoDB 
 
-## Installation and Running
+## Setup
 
-* npm i (or yarn add)
+> Create a file called .env in the root directory with content as follows:
 
-* npm run start-dev
+```env
+NODE_ENV=development
+PORT=8680
+SECRET_KEY=<Token Signing Key>
+MONGO_URI=<Mongodb Uri>
+ENABLE_UDP=false
+CRYPT_KEY=<32 character string for encryption>
+```
+
+## Installation
+
+* `npm i` or `yarn add`
+
+## Running
+
+> Development `npm run start-dev`
+
+> Production `npm start`
 
 ## What's done
+
+> Login / Register Works
+
+> Permanent Session is forming well.
 
 ### Working Modules
 

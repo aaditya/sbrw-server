@@ -1,18 +1,16 @@
-const driverPersonaModel = require('../../../models/driverPersona.js');
+const DriverPersona = require('../../../models/driverPersona.js');
 
-const permSess = (req, res) => {
-  driverPersonaModel.find({ user: req.decoded.id }, (err, doc) => {
-    if (err) {
-      res.status(500).send('');
-    } else {
-      const data = {
-        id: req.decoded.id,
-        token: req.headers.securityToken || req.headers.securitytoken,
-        personas: doc,
-      };
-      res.render('user/session', { data });
-    }
-  });
+const permSess = async (req, res, next) => {
+  try {
+    const { id } = req.decoded;
+    const token = req.headers.securityToken || req.headers.securitytoken;
+    const personas = await DriverPersona.find({ user: req.decoded.id });
+
+    const data = { id, token, personas };
+    return res.render('user/session', { data });
+  } catch (err) {
+    return next(err);
+  }
 };
 
 module.exports = permSess;

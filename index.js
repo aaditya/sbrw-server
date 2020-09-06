@@ -32,8 +32,19 @@ if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 app.use(cors());
 
 // Actual Routes
-// app.use('/soapbox-race-core/Engine.svc', require('./controllers/engine'));
-// app.use('/runner', require('./controllers/runner'));
+const engineController = require('./controllers/engine');
+
+app.use('/', engineController); // For In-Game Server Access
+app.use('//', engineController); // For Launcher Access
+
+// Testing Routes Only
+app.use('/runner', require('./controllers/runner'));
+
+// Error Handler (To-Do)
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  // Do something here.
+});
 
 // UDP Server Settings
 udpApp.on('error', (err) => {
@@ -47,7 +58,7 @@ udpApp.on('message', (msg, rinfo) => {
 
 udpApp.on('listening', () => {
   const address = udpApp.address();
-  console.log(`UDP server active on ${address.address}:${address.port}`);
+  console.log(new Date(), `UDP server active on ${address.address}:${address.port}`);
 });
 
 mongoose.connect(process.env.MONGO_URI, mongoOptions, (err) => {

@@ -1,0 +1,55 @@
+{
+  "type": "table",
+  "name": "chat_room",
+  "database": "soapbox",
+  "data": [
+    {
+      "ID": "1",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_ENGLISH",
+      "shortName": "EN"
+    },
+    {
+      "ID": "2",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_GERMAN",
+      "shortName": "DE"
+    },
+    {
+      "ID": "3",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_FRENCH",
+      "shortName": "FR"
+    },
+    {
+      "ID": "4",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_SPANISH",
+      "shortName": "ES"
+    },
+    {
+      "ID": "5",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_POLISH",
+      "shortName": "PL"
+    },
+    {
+      "ID": "6",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_BRAZILIANPORTUGUESE",
+      "shortName": "BR"
+    },
+    {
+      "ID": "7",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_RUSSIAN",
+      "shortName": "RU"
+    },
+    {
+      "ID": "8",
+      "amount": "10",
+      "longName": "TXT_CHAT_LANG_GENERAL",
+      "shortName": "GN"
+    }
+  ]
+}

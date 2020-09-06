@@ -12,17 +12,19 @@ exports.xcrypt = (text) => {
   return tag.toString('hex') + encrypted;
 };
 
-exports.ucrypt = (text, next) => {
-  let textArr = text.split('');
-  const tag = Buffer.from(textArr.splice(0, 32).join(''), 'hex');
-  textArr = text.join('');
-  const decipher = crypto.createDecipheriv(algorithm, process.env.CRYPT_KEY, iv);
+exports.ucrypt = (text) => new Promise((resolve, reject) => {
   try {
-    decipher.setAuthTag(tag);
+    let textArr = text.split('');
+    const tag = Buffer.from(textArr.splice(0, 32).join(''), 'hex');
+
+    textArr = textArr.join('');
+    const decipher = crypto.createDecipheriv(algorithm, process.env.CRYPT_KEY, iv).setAuthTag(tag);
+
     let dec = decipher.update(textArr, 'hex', 'utf8');
     dec += decipher.final('utf8');
-    next(null, dec);
+
+    resolve(dec);
   } catch (err) {
-    next(err);
+    reject(err);
   }
-};
+});

@@ -5,72 +5,25 @@ const Users = require('../../../models/user');
 
 const ecr = require('../Miscellaneous/crypt');
 
-const authUser = (req, res) => {
-  Users.findOne({ email: req.query.email }, (err, doc) => {
-    let data;
-    if (err) {
-      data = {
-        uid: 0,
-        token: '',
-        description: 'LOGIN ERROR',
-      };
-      res.type('application/xml').render('handlers/auth.ejs', { data });
-    } else if (doc) {
-      bcrypt.compare(req.query.password, doc.password, (err, result) => {
-        if (err) {
-          data = {
-            uid: 0,
-            token: '',
-            description: 'LOGIN ERROR',
-          };
-          res.type('application/xml').render('handlers/auth.ejs', { data });
-        } else if (result) {
-          Users.findByIdAndUpdate(doc._id, { status: 1 }, (err, doc) => {
-            if (err) {
-              data = {
-                uid: 0,
-                token: '',
-                description: 'LOGIN ERROR',
-              };
-              res.type('application/xml').render('handlers/auth.ejs', { data });
-            } else {
-              jwt.sign({ id: doc._id }, req.app.get('tokenSign'), (err, token) => {
-                if (err) {
-                  data = {
-                    uid: 0,
-                    token: '',
-                    description: 'LOGIN ERROR',
-                  };
-                } else {
-                  const etok = ecr.xcrypt(token);
-                  data = {
-                    uid: 1,
-                    token: etok,
-                    description: '',
-                  };
-                }
-                res.type('application/xml').render('handlers/auth.ejs', { data });
-              });
-            }
-          });
-        } else {
-          data = {
-            uid: 0,
-            token: '',
-            description: 'LOGIN ERROR',
-          };
-          res.type('application/xml').render('handlers/auth.ejs', { data });
-        }
-      });
-    } else {
-      data = {
-        uid: 0,
-        token: '',
-        description: 'LOGIN ERROR',
-      };
-      res.type('application/xml').render('handlers/auth.ejs', { data });
+const authUser = async (req, res, next) => {
+  try {
+    const user = await Users.findOne({ email: req.query.email });
+    if (!user) throw new Error('No Email Found');
+
+    if (await bcrypt.compare(req.query.password, user.password)) {
+      const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
+      const etok = ecr.xcrypt(token);
+      const data = { uid: 1, token: etok, description: '' };
+      return res.type('application/xml').render('handlers/auth.ejs', { data });
     }
-  });
+
+    const data = { uid: 0, token: '', description: 'LOGIN ERROR' };
+    return res.type('application/xml').render('handlers/auth.ejs', { data });
+  } catch (err) {
+    const data = { uid: 0, token: '', description: 'LOGIN ERROR' };
+    res.type('application/xml').render('handlers/auth.ejs', { data });
+    return next(err);
+  }
 };
 
 module.exports = authUser;

@@ -9,7 +9,7 @@ const logger = require('./Miscellaneous/logger');
 router.use(logger);
 
 // Achievements
-router.use('/achievements', require('./Achievements/index'));
+router.use('/achievements', require('./Achievements'));
 
 // Add Friend
 router.get('/addfriendrequest', require('./Core/addFriend'));
@@ -18,16 +18,16 @@ router.get('/addfriendrequest', require('./Core/addFriend'));
 router.get('/carclasses', require('./Core/carClasses'));
 
 // Catalog
-router.use('/catalog', require('./Catalog/index'));
+router.use('/catalog', require('./Catalog'));
 
 // Driver Persona
-router.use('/DriverPersona', auth, require('./DriverPersona/index'));
+router.use('/DriverPersona', auth, require('./DriverPersona'));
 
 // Event
-router.use('/event', require('./Event/index'));
+router.use('/event', require('./Event'));
 
 // Events
-router.use('/events', require('./Events/index'));
+router.use('/events', require('./Events'));
 
 // Server Info
 router.get('/GetServerInformation', require('./Core/getServerInfo'));
@@ -54,7 +54,7 @@ router.put('/setusersettings', require('./Core/setUserSettings'));
 router.get('/getfriendlistfromuserid', require('./Core/friendList'));
 
 // Gifts
-router.use('/Gifts', require('./Gifts/index'));
+router.use('/Gifts', require('./Gifts'));
 
 // Heartbeat
 router.post('/heartbeat', require('./Core/heartbeat'));
@@ -63,25 +63,28 @@ router.post('/heartbeat', require('./Core/heartbeat'));
 router.get('/LoginAnnouncements', require('./Core/loginAnnouncements'));
 
 // Logging
-router.use('/logging', require('./Logging/index'));
+router.use('/logging', require('./Logging'));
 
 // Matchmaking
-router.use('/matchmaking', require('./MatchMaking/index'));
+router.use('/matchmaking', require('./MatchMaking'));
+
+// Modding
+router.use('/Modding', require('./Modding'));
 
 // News Articles
 router.get('/NewsArticles', require('./Core/newsArticles'));
 
 // Online Users
-router.use('/OnlineUsers', require('./OnlineUsers/index'));
+router.use('/OnlineUsers', require('./OnlineUsers'));
 
 // Personas
-router.use('/personas', require('./Personas/index'));
+router.use('/personas', require('./Personas'));
 
 // Powerups
-router.use('/powerups', require('./Powerups/index'));
+router.use('/powerups', require('./Powerups'));
 
 // Promo Codes
-router.use('/PromoCode', require('./PromoCodes/index'));
+router.use('/PromoCode', require('./PromoCodes'));
 
 // Rebroadcasters
 router.get('/getrebroadcasters', require('./Core/Rebroadcasters'));
@@ -90,21 +93,21 @@ router.get('/getrebroadcasters', require('./Core/Rebroadcasters'));
 router.get('/getregioninfo', require('./Core/regionInfo'));
 
 // Reporting
-router.use('/Reporting', require('./Reporting/index'));
+router.use('/Reporting', require('./Reporting'));
 
 // Security
-router.use('/security', require('./Security/index'));
+router.use('/security', require('./Security'));
 
 // Session
-router.use('/Session', require('./Session/index'));
+router.use('/Session', require('./Session'));
 
 // Social
-router.use('/Social', require('./Social/index'));
+router.use('/Social', require('./Social'));
 
 // System Info
 router.get('/systeminfo', require('./Core/systeminfo'));
 
 // User Routes
-router.use('/User', require('./User/index'));
+router.use('/User', require('./User'));
 
 module.exports = router;
