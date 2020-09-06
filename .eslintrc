@@ -1,0 +1,18 @@
+{
+    "extends": "eslint-config-airbnb-base",
+    "env": {},
+    "rules": {
+        "no-console": 0, //could be removed after logger implementation
+        "new-cap": 0,
+        "no-underscore-dangle": 0,
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "comments": 160,
+                "ignoreUrls": true
+            }
+        ],
+        "no-shadow": 0
+    }
+}

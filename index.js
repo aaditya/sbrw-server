@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const dgram = require('dgram');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -26,6 +27,9 @@ app.use(bodyParser.xml());
 
 // Route Access Details
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
+
+// Cross Origin Policy
+app.use(cors());
 
 // Actual Routes
 // app.use('/soapbox-race-core/Engine.svc', require('./controllers/engine'));
