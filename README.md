@@ -6,7 +6,7 @@
 
 ## Description
 
-Need to build asset db first then you can go login to server. 
+You need to build asset db after installing dependencies (need to automate that for production setups). 
 
 If you want to contribute, you might want to change the linting rule linebreak-style.
 
@@ -63,15 +63,11 @@ CRYPT_KEY=<32 character string for encryption>
 
 ### Priority 1
 
+* Error Handler (Most Most Important)
+
 * Baskets
 
-* Persona Routes
-
-* Will add more as I develop further.
-
-* Maintain all the dependencies.
-
-* Make an exclusive compatible launcher.
+* Persona Routes (Most Important)
 
 ### Priority 2
 
