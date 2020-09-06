@@ -1,5 +1,5 @@
 const blockers = (req, res) => {
-    res.send('');
-}
+  res.send('');
+};
 
 module.exports = blockers;

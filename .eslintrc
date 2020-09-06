@@ -5,6 +5,7 @@
         "no-console": 0, //could be removed after logger implementation
         "new-cap": 0,
         "no-underscore-dangle": 0,
+        "linebreak-style": ["error", "windows"],
         "max-len": [
             "error",
             {

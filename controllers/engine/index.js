@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 // Miscellaneous functions.
@@ -62,7 +63,7 @@ router.post('/heartbeat', require('./Core/heartbeat'));
 router.get('/LoginAnnouncements', require('./Core/loginAnnouncements'));
 
 // Logging
-router.use('/logging', require('./Logging/index'))
+router.use('/logging', require('./Logging/index'));
 
 // Matchmaking
 router.use('/matchmaking', require('./MatchMaking/index'));

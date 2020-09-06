@@ -1,5 +1,5 @@
 const carSlots = (req, res) => {
-    res.send(`
+  res.send(`
     <CarSlotInfoTrans>
     <CarsOwnedByPersona>
         <OwnedCarTrans>
@@ -154,7 +154,7 @@ const carSlots = (req, res) => {
         </ProductTrans>
     </ObtainableSlots>
     <OwnedCarSlotsCount>40</OwnedCarSlotsCount>
-</CarSlotInfoTrans>`)
-}
+</CarSlotInfoTrans>`);
+};
 
 module.exports = carSlots;

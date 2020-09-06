@@ -1,5 +1,6 @@
-const express = require('express');
-const router = express.Router();
+const { Router: er } = require('express');
+
+const router = er();
 
 router.get('/GetExpLevelPointsMap', require('./explpm'));
 

@@ -6,7 +6,13 @@
 
 ## Description
 
-Everything is broken right now. Need to rebuild asset database and create assetdb installer.
+Everything is broken right now. 
+
+Need to rebuild asset database and create assetdb installer.
+
+Need to correct code as per linting guide.
+
+If you want to contribute, you might want to change the linting rule linebreak-style as I primarily develop in Windows.
 
 ## Requirements
 

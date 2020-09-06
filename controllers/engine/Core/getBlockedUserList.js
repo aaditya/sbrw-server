@@ -1,5 +1,5 @@
 const blockedUserList = (req, res) => {
-    res.send('');
-}
+  res.send('');
+};
 
 module.exports = blockedUserList;
