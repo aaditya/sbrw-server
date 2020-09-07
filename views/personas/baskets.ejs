@@ -1,0 +1,26 @@
+<CommerceResultTrans>
+  <CommerceItems/>
+  <InvalidBasket/>
+  <InventoryItems>
+    <InventoryItemTrans>
+      <Hash>0</Hash>
+      <InventoryId>0</InventoryId>
+      <RemainingUseCount>0</RemainingUseCount>
+      <ResellPrice>0.0</ResellPrice>
+    </InventoryItemTrans>
+  </InventoryItems>
+  <PurchasedCars>
+    <%- data.ownedCarTrans %>
+  </PurchasedCars>
+  <Status>Success</Status>
+  <Wallets>
+    <WalletTrans>
+      <Balance><%= data.wallet.cash %></Balance>
+      <Currency>CASH</Currency>
+    </WalletTrans>
+    <WalletTrans>
+      <Balance><%= data.wallet.boost %></Balance>
+      <Currency>BOOST</Currency>
+    </WalletTrans>
+  </Wallets>
+</CommerceResultTrans>

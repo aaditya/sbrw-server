@@ -10,7 +10,7 @@ const authUser = async (req, res, next) => {
     const user = await Users.findOne({ email: req.query.email });
     if (!user) throw new Error('No Email Found');
 
-    if (await bcrypt.compare(req.query.password, user.password)) {
+    if (await bcrypt.compare(req.query.password, user.pwd)) {
       const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
       const etok = ecr.xcrypt(token);
       const data = { uid: 1, token: etok, description: '' };

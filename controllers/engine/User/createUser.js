@@ -16,7 +16,7 @@ const register = async (req, res, next) => {
     const pwdHash = await bcrypt.hash(req.query.password, 10);
     const newUser = await new Users({
       email: req.query.email,
-      password: pwdHash,
+      pwd: pwdHash,
     }).save();
 
     const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY);

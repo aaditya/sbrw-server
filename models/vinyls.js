@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const vinylSchema = mongoose.Schema({
+const vinylSchema = new Schema({
   id: Number,
   bundleItems: String,
   categoryId: String,
@@ -28,4 +28,4 @@ const vinylSchema = mongoose.Schema({
   parentCategoryId: Number,
 });
 
-module.exports = mongoose.model('Vinyls', vinylSchema);
+module.exports = model('Vinyls', vinylSchema);

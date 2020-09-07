@@ -1,14 +1,13 @@
-const Persona = require('../../../models/driverPersona.js');
+const Users = require('../../../models/user');
 
-const nameFinder = (req, res) => {
-  Persona.findOne({ name: req.query.name }, (err, doc) => {
-    if (err) {
-      res.status(500).send('');
-    } else {
-      const available = !doc;
-      res.type('application/xml').render('handlers/string.ejs', { flag: available });
-    }
-  });
+const nameFinder = async (req, res, next) => {
+  try {
+    const persona = await Users.findOne({ 'persona.name': req.query.name });
+    const available = !persona;
+    res.type('application/xml').render('handlers/string.ejs', { flag: available });
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports = nameFinder;

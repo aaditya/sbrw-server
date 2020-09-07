@@ -1,4 +1,4 @@
-# NFSW Server
+# SBRW Server
 
 [![dependencies Status](https://david-dm.org/aaditya/sbrw-server/status.svg)](https://david-dm.org/aaditya/sbrw-server)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aaditya/sbrw-server/graphs/commit-activity)
@@ -6,32 +6,32 @@
 
 ## Description
 
-You need to build asset db after installing dependencies (need to automate that for production setups). 
+This server is a NodeJS port of SBRW Server, written in Java.
 
-If you want to contribute, you might want to change the linting rule linebreak-style.
+If you want to contribute, you might want to change the linting rule linebreak-style as per your OS.
 
 ## Requirements
 
-* NodeJS (v12+) + NPM / Yarn
+* NodeJS (v12+)
 
 * MongoDB 
 
 ## Setup
 
-> Create a file called .env in the root directory with content as follows:
+> Create a file `.env` in the root directory with content as follows:
 
 ```env
 NODE_ENV=development
 PORT=8680
 SECRET_KEY=<Token Signing Key>
-MONGO_URI=<Mongodb Uri>
+MONGO_URI=<Mongodb URI>
 ENABLE_UDP=false
 CRYPT_KEY=<32 character string for encryption>
 ```
 
 ## Installation
 
-* `npm i` or `yarn add`
+* `npm i`
 
 ## Running
 
@@ -44,6 +44,8 @@ CRYPT_KEY=<32 character string for encryption>
 > Login / Register Works
 
 > Permanent Session is forming well.
+
+> Automated Assets Generation.
 
 ### Working Modules
 
@@ -63,11 +65,9 @@ CRYPT_KEY=<32 character string for encryption>
 
 ### Priority 1
 
-* Error Handler (Most Most Important)
+* Persona Routes
 
 * Baskets
-
-* Persona Routes (Most Important)
 
 ### Priority 2
 

@@ -1,10 +1,8 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const schema = mongoose.Schema;
-
-const basketSchema = new schema({
+const basketSchema = new Schema({
   ownedCarTrans: String,
   productId: String,
 });
 
-module.exports = mongoose.model('Basket', basketSchema);
+module.exports = model('Basket', basketSchema);

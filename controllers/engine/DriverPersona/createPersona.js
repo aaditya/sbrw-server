@@ -1,28 +1,26 @@
-const Persona = require('../../../models/driverPersona.js');
+const Users = require('../../../models/user');
 
 const registerPersona = async (req, res, next) => {
   try {
-    const persona = await Persona.findOne({ name: req.query.name });
-    if (persona) {
-      return res.send('Player with this name already exists!');
-    }
+    const user = await Users.findOne({ _id: req.decoded.id });
 
-    const profile = await new Persona({
+    const persona = {
       percentToLevel: 0,
       rating: 0,
       rep: 0,
       repAtCurrLvl: 0,
       score: 0,
-      boost: 0,
       cash: 300000,
       iconIndex: req.query.iconIndex,
       level: 1,
       name: req.query.name,
-      user: req.decoded.id,
-      stamp: new Date().getTime(),
-    }).save();
+    };
 
-    return res.type('application/xml').render('personas/personaCreate.ejs', { data: profile });
+    await Users.findOneAndUpdate({ _id: req.decoded.id }, { $push: { persona } });
+
+    const data = { ...persona, localId: user.persona.length };
+
+    return res.type('application/xml').render('personas/personaCreate.ejs', { data });
   } catch (err) {
     return next(err);
   }

@@ -10,6 +10,7 @@ const protect = async (req, res, next) => {
 
     const decoded = jwt.verify(decr, process.env.SECRET_KEY);
     req.decoded = decoded;
+    req.token = token;
 
     return next();
   } catch (err) {

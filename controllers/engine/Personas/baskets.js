@@ -1,15 +1,15 @@
 const Baskets = require('../../../models/baskets');
 
-const flatten = require('../Miscellaneous/tree');
-
-const basket = async (req, res, next) => {
+const basket = async (req, res) => {
   try {
-    const body = flatten(req.body).BasketTrans.Items.BasketItemTrans;
-    const baskets = await Baskets.find({ productId: body.ProductId });
-    console.log(baskets);
-    res.send('');
+    const productId = req.body.BasketTrans.Items[0].BasketItemTrans[0].ProductId[0];
+    const { ownedCarTrans } = await Baskets.findOne({ productId });
+    const renderData = { ownedCarTrans, wallet: { cash: 300000.0, boost: 0.0 } };
+    // Implement Transaction Logic
+    res.type('application/xml').render('personas/baskets.ejs', { data: renderData });
   } catch (err) {
-    next(err);
+    console.log(err);
+    // next(err);
   }
 };
 
