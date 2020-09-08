@@ -18,7 +18,7 @@ const registerPersona = async (req, res, next) => {
 
     await Users.findOneAndUpdate({ _id: req.decoded.id }, { $push: { persona } });
 
-    const data = { ...persona, localId: user.persona.length };
+    const data = { ...persona, localId: user.persona.length + 1 };
 
     return res.type('application/xml').render('personas/personaCreate.ejs', { data });
   } catch (err) {

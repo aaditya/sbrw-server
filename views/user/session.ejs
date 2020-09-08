@@ -1,6 +1,6 @@
 <UserInfo>
     <% if (data.persona.length > 0) { %>
-    <defaultPersonaIdx>0</defaultPersonaIdx>
+    <defaultPersonaIdx>1</defaultPersonaIdx>
     <% } else { %>
     <defaultPersonaIdx></defaultPersonaIdx>
     <% } %>
@@ -13,7 +13,7 @@
             <Level><%= p.level %></Level>
             <Name><%= p.name %></Name>
             <PercentToLevel><%= p.percentToLevel %></PercentToLevel>
-            <PersonaId><%= i %></PersonaId>
+            <PersonaId><%= i + 1 %></PersonaId>
             <Rating><%= p.rating %></Rating>
             <Rep><%= p.rep %></Rep>
             <RepAtCurrentLevel><%= p.repAtCurrentLevel %></RepAtCurrentLevel>
@@ -27,6 +27,6 @@
         <remoteUserId>0</remoteUserId>
         <securityToken><%= data.token %></securityToken>
         <subscribeMsg></subscribeMsg>
-        <userId>0</userId>
+        <userId>1</userId>
     </user>
 </UserInfo>

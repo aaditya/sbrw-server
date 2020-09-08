@@ -1,0 +1,17 @@
+[
+  {
+    "messageSrv": "Message server example",
+    "country": "FR (example)",
+    "adminList": "Admins pseudo here (To put several, separate the pseudo by \";\")",
+    "bannerUrl": "Your banner url (image)",
+    "discordUrl": "Your discord server url",
+    "facebookUrl": "Your facebook page url",
+    "homePageUrl": "Your website page url",
+    "numberOfRegistered": "0",
+    "ownerList": "Owners pseudo here (To put several, separate the pseudo by \";\")",
+    "serverName": "Name of server",
+    "timezone": "0",
+    "activatedHolidaySceneryGroups": "SCENERY_GROUP_CHRISTMAS;SCENERY_GROUP_NEWYEARS;SCENERY_GROUP_OKTOBERFEST;SCENERY_GROUP_HALLOWEEN",
+    "disactivatedHolidaySceneryGroups": "SCENERY_GROUP_CHRISTMAS_DISABLE;SCENERY_GROUP_NEWYEARS_DISABLE;SCENERY_GROUP_HALLOWEEN_DISABLE;SCENERY_GROUP_OKTOBERFEST_DISABLE"
+  }
+]
