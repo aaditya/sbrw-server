@@ -10,7 +10,6 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: `${logRoot}/error.log`, level: 'error' }),
     new winston.transports.File({ filename: `${logRoot}/info.log`, level: 'info' }),
-    new winston.transports.Console({ format: winston.format.simple() }),
   ],
   exceptionHandlers: [
     new winston.transports.File({ filename: `${logRoot}/exceptions.log` }),
