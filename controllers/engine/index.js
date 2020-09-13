@@ -4,9 +4,6 @@ const router = express.Router();
 
 // Miscellaneous functions.
 const auth = require('./User/tokenVerify');
-const logger = require('./Miscellaneous/logger');
-
-router.use(logger);
 
 // Achievements
 router.use('/achievements', require('./Achievements'));

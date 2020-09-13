@@ -1,8 +1,7 @@
 {
     "features": {
         "udp": true,
-        "cors": true,
-        "logger": false
+        "cors": true
     },
     "info": {
         "messageSrv": "Server Message",

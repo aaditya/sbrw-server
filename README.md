@@ -4,11 +4,11 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/aaditya/sbrw-server/graphs/commit-activity)
 [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/aaditya/sbrw-server/blob/master/LICENSE)
 
-## Description
+## Overview
 
-This server is a NodeJS port of SBRW Server, written in Java.
+This is a compatible server implementation for Need For Speed World and borrows a lot of references from the SoapBox RaceWorld Project.It still is a work in progress and still has a lot of stuff which needs to be taken care of. So far the game loads into the login screen and can create driver (persona). Need to create the logiic for other stuff as well.
 
-If you want to contribute, you might want to change the linting rule linebreak-style as per your OS.
+This uses NoSQL DB paradigm so everything needs to be reworked from the original sbrw project accordingly.
 
 ## Requirements
 
@@ -29,52 +29,26 @@ ENABLE_UDP=false
 CRYPT_KEY=<32 character string for encryption>
 ```
 
-## Installation
+## Installation and Running
 
-* `npm i`
+> `npm i`
 
-## Running
+> In Development Mode `npm run start-dev`
 
-> Development `npm run start-dev`
+> In Production Mode `npm start` (You have to set up environment variables accordingly)
 
-> Production `npm start`
+## Contributing
 
-## What's done
+* Fork this repository.
 
-> Login / Register Works
+* Create a branch with name as per your feature/issue.
 
-> Permanent Session is forming well.
+* Commit the code and raise a pull request.
 
-> Automated Assets Generation.
+* Wait for code review and further actions.
 
-### Working Modules
+## Notes
 
-* Products in Category 
+> You might want to use the sister repo [sbrw-capture](https://github.com/aaditya/sbrw-capture) to monitor the requests' data and appropriate response from this server or any other sbrw server.
 
-* Create/Delete Driver Persona.
-
-* Auth.
-
-### Miscellaneous
-
-* API List.
-
-* UDP server setup.
-
-## To Do
-
-### Priority 1
-
-* Persona Routes
-
-* Baskets
-
-### Priority 2
-
-* Intuitive Logger Function.
-
-* UDP packet capturing.
-
-* Multiplayer Patch
-
-* Freeroam Patch
+> You might want to change linting rules for line break according to your OS.

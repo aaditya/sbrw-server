@@ -26,7 +26,11 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
-app.use(bodyParser.xml());
+app.use(bodyParser.xml({
+  verify: (req, res, buf, encoding) => {
+    if (buf && buf.length) req.rawBody = buf.toString(encoding || 'utf8');
+  },
+}));
 
 // Route Access Details
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
