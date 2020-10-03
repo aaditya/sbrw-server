@@ -6,9 +6,9 @@
 
 ## Overview
 
-This is a compatible server implementation for Need For Speed World and borrows a lot of references from the SoapBox RaceWorld Project.It still is a work in progress and still has a lot of stuff which needs to be taken care of. So far the game loads into the login screen and can create driver (persona). Need to create the logiic for other stuff as well.
+This is a compatible server implementation for Need For Speed World and borrows a lot of references from the SoapBox RaceWorld Project. It still is a work in progress and still has a lot of stuff which needs to be taken care of. So far the game loads into the login screen and can create driver (persona). Need to create the logic for other stuff as well.
 
-This uses NoSQL DB paradigm so everything needs to be reworked from the original sbrw project accordingly.
+This uses NoSQL DB paradigm so everything needs to be reworked from the original SBRW project accordingly.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ This uses NoSQL DB paradigm so everything needs to be reworked from the original
 NODE_ENV=development
 PORT=8680
 SECRET_KEY=<Token Signing Key>
-MONGO_URI=<Mongodb URI>
+MONGO_URI=<MongoDB URI>
 ENABLE_UDP=false
 CRYPT_KEY=<32 character string for encryption>
 ```
