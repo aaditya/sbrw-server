@@ -6,29 +6,6 @@ const User = new Schema({
     unique: true,
     required: true,
   },
-  persona: [{
-    carslots: {
-      count: {
-        type: Number,
-      },
-      slots: [{
-        ownedCarTrans: String,
-        selected: Boolean,
-      }],
-    },
-    cash: Number,
-    curCarIndex: Number,
-    globalId: Number,
-    iconIndex: Number,
-    level: Number,
-    motto: String,
-    name: String,
-    percentToLevel: Number,
-    rating: Number,
-    rep: Number,
-    repAtCurrLvl: Number,
-    score: Number,
-  }],
   pwd: String,
   wallet: {
     boost: {

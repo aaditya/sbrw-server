@@ -1,29 +1,30 @@
-const Users = require('../../../models/user');
+const Personas = require('../../../models/persona');
 
-const registerPersona = async (req, res, next) => {
-  try {
-    const user = await Users.findOne({ _id: req.decoded.id });
+const registerPersona = async (req, res) => {
+  const { decoded: { id }, query } = req;
+  const { iconIndex, name } = query;
 
-    const persona = {
-      percentToLevel: 0,
-      rating: 0,
-      rep: 0,
-      repAtCurrLvl: 0,
-      score: 0,
-      cash: 300000,
-      iconIndex: req.query.iconIndex,
-      level: 1,
-      name: req.query.name,
-    };
+  const persona = await Personas.create({
+    userId: id,
+    percentToLevel: 0,
+    rating: 0,
+    rep: 0,
+    repAtCurrLvl: 0,
+    score: 0,
+    cash: 300000,
+    iconIndex,
+    level: 1,
+    name,
+  });
 
-    await Users.findOneAndUpdate({ _id: req.decoded.id }, { $push: { persona } });
+  const data = {
+    ...persona.toObject(),
+    localId: 1
+  };
 
-    const data = { ...persona, localId: user.persona.length + 1 };
-
-    return res.type('application/xml').render('personas/personaCreate.ejs', { data });
-  } catch (err) {
-    return next(err);
-  }
+  return res
+    .type('application/xml')
+    .render('personas/personaCreate.ejs', { data });
 };
 
 module.exports = registerPersona;
